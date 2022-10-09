@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'letra_animacion';
+    src: url('../mickey/MICKEY.TTF');
+}
+body {
+    background-color: black
+}
+.menu {
+    margin: 10% 25% 20% 25%;
+    height: 200px;
+    width: 50%;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: 'letra_animacion';
+}
+.login_register {
+    display: flex;
+    justify-content: center;
+}
+
+.login_register button {
+    margin: 5%;
+    padding: 5%;
+    font-size: 30px;
+    font-family: 'letra_animacion';
+    border: 1px solid black;
+    border-radius: 15%;
+}
+
+.login_register button:hover {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+.snake {
+    width: 200px;
+}
+
+.d-none {
+    display: none;
+}
+.apple {
+    width: 50px;
+    height: 50px;
+}
+
+.menu_login {
+    text-align: center;
+    color: white;
+    width: 275px;
+    border: 1px solid white;
+    padding: 2.5%;
+}
+
+.menu_login .return {
+    text-align: right;    
+}
