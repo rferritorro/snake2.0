@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'letra_animacion';
+    src: url('../mickey/MICKEY.TTF');
+}
+body {
+    padding: 0% 5% 0% 5%;
+    background-color: gray;
+}
+
+.user_profile {
+    width: 15%;
+    border: 2px solid black;
+    float: left;
+    text-align: center;
+}
+
+.user_profile img{
+    width: 80%;
+}
+
+.score {
+
+}
+
+.highscore {
+    width: 15%;
+    float: right;
+    border: 1px solid black;
+}
+
+.base {
+    width: 590px;
+    height: 600px;
+    border: 2px solid black;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.d-none {
+    display: none;
+}
+.square {
+    width: 27.5px;
+    height: 27.5px;
+    border: 1px solid transparent
+}
+.mode_games {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+.snake {
+    background-color: green;
+}
+.head {
+    background-color: black;
+}
+
+.apple {
+    background-color: red;
+    border-radius: 10%;
+}
+.mode_games button {
+    padding: 1.5%;
+    margin: 1.5%;
+}
+
+.base_dead {
+    background-color: black;
+}
+.button_game {
+    padding: 1.75%;
+    font-family: 'letra_animacion';
+}
+.game_over {
+    background-color: white;
+}
+.lick {
+    background-color: red;
+}
+.description_game {
+    width: 60%;
+    padding: 1.75%;
+    display: flex;
+   flex-flow: column wrap;
+}
+
+.description_game button {
+    padding: 1.5%;
+    margin-top: 2.5%;
+}

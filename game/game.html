@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/game.css">
+    <title>Snake 2.0</title>
+</head>
+<body>
+    <div class="user_profile">
+        <div id="profile" class="profile">
+            <img src="../assets/img/default.jpg" alt="">
+            <h4>Username</h4>
+            <span id="highscore" class="d-none">Highscore:<span>200</span></span>
+        </div>
+        <span id="score" class="d-none">Score:<span id="number_score" class="score">0</span></span>
+    </div>
+    <div id="button_game" class="buttons_game d-none">
+        <button id="restart_game" class="button_game d-none">Restart</button>
+        <button id="start_game" class="button_game">Start</button>
+        <button id="return_button" class="button_game">Return</button>
+    </div>
+    <div id="table-score" class="highscore d-none">
+        <h4>HighScore</h4>
+        <table>
+
+        </table>
+    </div>
+    <div id="base_game" class="base d-none"></div>
+    <div id="mode_games" class="mode_games">
+        <button onclick="select_mode_game(0)">Classic Game</button>
+        <button onclick="select_mode_game(1)">Avant Game</button>
+        <button onclick="select_mode_game(2)">Pro Game</button>
+    </div>
+    <div id="description_game" class="description_game">
+
+    </div>
+    <script src="./play/game.js">
+    </script>
+</body>
+</html>

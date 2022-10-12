@@ -49,7 +49,7 @@ function validate_user(user,password,re_password=null) {
         console.log("error")
     } else {
         // console.log(user.value,password.value)
-       console.log(fields)
+        location.href="game/game.html"
     }
 }
 begin_buttons()
