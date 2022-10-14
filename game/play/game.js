@@ -32,23 +32,26 @@ function select_mode_game(type) {
         default:
             break;
     }
+
+    if (localStorage.getItem('reload') == 0) {
+        localStorage.setItem('reload',1)
+        document.getElementById('classic_mode_button').click()
+        document.getElementById('play_game_0').click()
+    }
 }
 
-async function classic_mode(description_game,mode_games,highscore,score,table_score,base_game,button_game,restart) {
+async function classic_mode(description_game,mode_games,highscore,score,table_score,base_game,button_game) {
     
-    if (!restart) {
 
-        mode_games.classList.add('d-none')
-        mode_games.classList.remove('mode_games')
-        description_game.classList.add('d-none')
-        description_game.classList.remove('description_game')
-        highscore.classList.remove('d-none')
-        score.classList.remove('d-none')
-        table_score.classList.remove('d-none')
-        base_game.classList.remove('d-none')
-        button_game.classList.remove('d-none')
-
-    }
+    mode_games.classList.add('d-none')
+    mode_games.classList.remove('mode_games')
+    description_game.classList.add('d-none')
+    description_game.classList.remove('description_game')
+    highscore.classList.remove('d-none')
+    score.classList.remove('d-none')
+    table_score.classList.remove('d-none')
+    base_game.classList.remove('d-none')
+    button_game.classList.remove('d-none')
 
     let start_button = document.getElementById('start_game')
     let restart_button = document.getElementById('restart_game')
@@ -69,15 +72,8 @@ async function classic_mode(description_game,mode_games,highscore,score,table_sc
             interval_game(direccion,snake,squares,velocity)
 
             restart_button.addEventListener("click",() => {
-                start_button.classList.remove("d-none")
-                restart_button.classList.add("d-none")
-                squares.forEach((value, index, array) => {
-                    squares[index].classList.remove("base_dead")
-                    squares[index].classList.remove("game_over")
-                    squares[index].classList.remove("lick")
-                    squares[index].classList.remove("snake")
-                })
-                classic_mode(description_game,mode_games,highscore,score,table_score,base_game,button_game,restart=true)
+               window.location.reload()
+               localStorage.setItem('reload',0)
             })
         }
     })
@@ -240,6 +236,8 @@ function type_game(type) {
     let base_game = document.getElementById('base_game')
     let button_game = document.getElementById('button_game')
     let return_button = document.getElementById('return_button')
+
+ 
 
     return_button.addEventListener("click",() => {window.location.reload()})
 
