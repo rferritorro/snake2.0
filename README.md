@@ -9,3 +9,5 @@ Posicionarse en el backend:
 
 Una vez instalado iniciar servidor con :
     - node app en la carpeta de backend
+
+Inicio session : http:localhost:2500
